@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Technics</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.min.css">
+</head>
+<body>
+<div class="wrapper">
+  <header class="header">
+    <div class="container">
+      <div class="header__top">
+        <div class="header__logo">
+          <a href="index.html" class="header__logo-link">
+            <img src="images/logo.png" alt="">
+          </a>
+          <div class="header__burger" id="hamburger" onclick="this.classList.toggle('open'), toggleMenuClass();">
+            <svg width="100" height="100" viewBox="0 0 100 100">
+              <path class="line line1" d="M 20,29.000046 H 80.000231 C 80.000231,29.000046 94.498839,28.817352 94.532987,66.711331 94.543142,77.980673 90.966081,81.670246 85.259173,81.668997 79.552261,81.667751 75.000211,74.999942 75.000211,74.999942 L 25.000021,25.000058" />
+              <path class="line line2" d="M 20,50 H 80" />
+              <path class="line line3" d="M 20,70.999954 H 80.000231 C 80.000231,70.999954 94.498839,71.182648 94.532987,33.288669 94.543142,22.019327 90.966081,18.329754 85.259173,18.331003 79.552261,18.332249 75.000211,25.000058 75.000211,25.000058 L 25.000021,74.999942" />
+            </svg>
+          </div>
+        </div>
+        <div class="header__overlay"></div>
+        <div class="header__contacts">
+          <div class="header__phone">
+            <img src="images/icons/icon-phone.svg" alt="">
+            <a href="tel:+78126799293" class="header__phone-item">+7(812)679-92-93</a>
+          </div>
+          <div class="header__email-one">
+            <div class="header__email-one__text">Аренда -</div>
+            <img src="images/icons/icon-email.svg" alt="">
+            <a href="mailto:arenda-stispunt@yandex.ru" class="header__email-one__item">arenda-stispunt@yandex.ru</a>
+          </div>
+          <div class="header__email-two">
+            <div class="header__email-two__text">СМР,шпунт -</div>
+            <img src="images/icons/icon-email.svg" alt="">
+            <a href="mailto:info@stispunt.ru" class="header__email-two__item">info@stispunt.ru</a>
+          </div>
+
+        </div>
+
+      </div>
+      <div class="header__bottom">
+        <nav class="header__nav">
+          <ul class="header__menu">
+            <li class="header__menu-item">
+              <a href="index.html" class="header__menu-link">Главная</a>
+            </li>
+            <li class="header__menu-item">
+              <a href="about.html" class="header__menu-link">О нас</a>
+            </li>
+            <li class="header__menu-item header__menu-item--dropdown-one">
+              <a href="#" class="header__menu-link" id="services-link" onclick="toggleSubMenu()">Услуги</a>
+              <img src="images/icons/arrow-down.svg" alt="">
+              <ul class="header__submenu-one " >
+                <li class="header__submenu-list">
+                  <a class="header__submenu-link" href="#">Строительство гидротехнических сооружений</a></li>
+                <li class="header__submenu-list">
+                  <a href="#">Устройство шпунтового ограждения и расчет</a>
+                </li>
+                <li class="header__submenu-list">
+                  <a class="header__submenu-link" href="#">Раскрепление шпунтового ограждения</a></li>
+                <li class="header__submenu-list">
+                  <a class="header__submenu-link" href="#">Земляные работы</a></li>
+                <li class="header__submenu-list">
+                  <a class="header__submenu-link" href="#">Функции генерального подрядчика</a></li>
+              </ul>
+            </li>
+            <li class="header__menu-item header__menu-item--dropdown-two">
+
+              <a href="#" class="header__menu-link" onclick="toggleSubMenuTwo()">Оборудование</a>
+              <img src="images/icons/arrow-down.svg" alt="">
+              <ul class="header__submenu-two">
+                <li class="header__submenu-list">
+                  <a class="header__submenu-link" href="installations.html">Установки статического вдавливания</a>
+                </li>
+                <li class="header__submenu-list">
+                  <a class="header__submenu-link" href="vibration-loaders.html">Вибропогружатели</a>
+                </li>
+                <!--                    <li class="header__submenu-list">-->
+                <!--                      &lt;!&ndash;                    <a class="header__submenu-link" href="#">Оборудование 3</a>&ndash;&gt;-->
+                <!--                    </li>-->
+              </ul>
+            </li>
+            <li class="header__menu-item">
+              <a href="shpunt.html" class="header__menu-link">Шпунт Ларсена</a>
+            </li>
+            <li class="header__menu-item">
+              <a href="rent.html" class="header__menu-link">Аренда техники</a>
+            </li>
+            <li class="header__menu-item">
+              <a href="news.html" class="header__menu-link">Новости</a></li>
+            <li class="header__menu-item"><a href="contacts.html" class="header__menu-link">Контакты</a>
+            </li>
+            <li class="header__menu-item">
+              <a href="vacancy.html" class="header__menu-link">Вакансии</a>
+            </li>
+            <div class="header__contacts-mobile">
+              <div class="header__phone">
+                <img src="images/icons/icon-phone.svg" alt="">
+                <a href="tel:+78126799293" class="header__phone-item">+7(812)679-92-93</a>
+              </div>
+              <div class="header__email-one">
+                <div class="header__email-one__text">Аренда -</div>
+                <img src="images/icons/icon-email.svg" alt="">
+                <a href="mailto:arenda-stispunt@yandex.ru" class="header__email-one__item">arenda-stispunt@yandex.ru</a>
+              </div>
+              <div class="header__email-two">
+                <div class="header__email-two__text">СМР,шпунт -</div>
+                <img src="images/icons/icon-email.svg" alt="">
+                <a href="mailto:info@stispunt.ru" class="header__email-two__item">info@stispunt.ru</a>
+              </div>
+
+            </div>
+          </ul>
+        </nav>
+      </div>
+    </div>
+
+
+
+
+  </header>
+
+  <div class="main">
+    <section class="installations">
+      <div class="container">
+        <h2 class="title">
+          Вибропогружатели
+        </h2>
+        <div class="installations__top">
+          <div class="installations__top-texts">
+            <p class="installations__top-text">
+              Вибропогружатель — машина, предназначенная для погружения железобетонных труб, колодцев, свайных элементов в песчаные и глинистые грунты.
+            </p>
+            <p class="installations__top-text">
+              Принцип действия вибропогружателя основан на эффекте резкого снижения сопротивлению погружения свайного элемента при сообщении последнему вибрации. Этот эффект основан на свойстве тиксотропии двухфазных жидкостей.
+            </p>
+            <p class="installations__top-text">
+              Основными достоинствами данного вида оборудования являются низкая стоимость погружения свай и меньший шум при работе, чем при использовании свайных молотов.
+            </p>
+
+          </div>
+          <img class="installations__top-img" src="images/technics/2.png" alt="установка вторая">
+          <img src="images/technics/icons.svg" alt="" class="installations__top-icon">
+          <div class="installations__img-zoom">
+            <img  src="images/icons/zoom.svg" alt="" >
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+    <section class="connect">
+      <div class="container">
+        <form action="#" onsubmit="toMail();return false" class="form">
+          <h2 class="form__title">
+            Запросите коммерческое предложение на установку статического вдавливания
+          </h2>
+          <div class="form__inner">
+            <input type="text" class="form__input  nameToMail" placeholder="Имя" required>
+            <input type="tel" class="form__input phoneToMail" placeholder="Телефон*" pattern="^((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{7,10}$" required>
+            <input type="email" class="form__input  emailToMail" placeholder="Электронная почта" required>
+            <button type="submit" class="form__btn">
+              Запросить КП
+            </button>
+          </div>
+          <div class="form__checkbox">
+            <input class="form__checkbox-input" type="checkbox">
+            <p class="form__checkbox-text">
+              Даю свое согласие на <a href="#" class="form__checkbox-link">
+              обработку персональных данных
+            </a>
+            </p>
+          </div>
+          <img class="form__icon-one" src="images/technics/icons-2.svg" alt="" >
+          <img class="form__icon-two" src="images/technics/icons-3.svg" alt="" >
+
+        </form>
+      </div>
+    </section>
+<section class="vibration">
+  <div class="container">
+    <div class="vibration__items">
+      <a class="vibration__item" href="vibration-loaders-normal.html">
+        <img class="vibration__item-img" src="images/technics/def.png" alt="" >
+        <h4 class="vibration__item-title">
+          Нормальной частоты
+        </h4>
+      </a>
+      <a class="vibration__item" href="#">
+        <img class="vibration__item-img" src="images/technics/height.png" alt="" >
+        <h4 class="vibration__item-title">
+          Высокочастотные
+        </h4>
+      </a>
+      <a class="vibration__item" href="#">
+        <img class="vibration__item-img" src="images/technics/without.png" alt="" >
+        <h4 class="vibration__item-title">
+          Безрезонансные
+        </h4>
+      </a>
+    </div>
+  </div>
+</section>
+
+
+  </div>
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__inner">
+        <div class="footer__about">
+          <img class="footer__logo" src="images/logo.png" alt="" >
+          <p class="footer__about-text">
+            Общество с ограниченной ответственностью «СтройТехИмпорт»
+          </p>
+          <div class="footer__about-links">
+            <a class="footer__about-link" href="#" >
+              <img src="images/icons/map.svg" alt="">
+              <p class="footer__about-link-text">
+                195027, г.Санкт-Петербург, Выборгское шоссе, д. 112.
+              </p>
+            </a>
+            <a class="footer__about-link" href="tel:78126799293" >
+              <img src="images/icons/icon-phone.svg" alt="">
+              <p class="footer__about-link-text">
+                +7 (812) 679-92-93
+              </p>
+            </a>
+            <a class="footer__about-link" href="mailto:info@stispunt.ru" >
+              <img src="images/icons/mail-2.png" alt="">
+              <p class="footer__about-link-text">
+                info@stispunt.ru
+              </p>
+            </a>
+
+          </div>
+        </div>
+        <div class="footer__links">
+          <div class="footer__links-item">
+            <a class="footer__link" href="#" >
+              Устройство шпунтового ограждения и расчет
+            </a>
+            <a class="footer__link" href="#" >
+              Строительство гидротехнических сооружений
+            </a>
+            <a class="footer__link" href="#" >
+              Раскрепление шпунтового ограждения
+            </a>
+            <a class="footer__link" href="#" >
+              Строительство эстакад, путепроводов и мостов
+            </a>
+          </div>
+          <div class="footer__links-item">
+            <a class="footer__link" href="#" >
+              Погружение и извлечение шпунта
+            </a>
+            <a class="footer__link" href="#" >
+              Защита строительных конструкций
+            </a>
+            <a class="footer__link" href="#" >
+              Свайные работы
+            </a>
+            <a class="footer__link" href="#" >
+              Земляные работы
+            </a>
+            <a class="footer__link" href="#" >
+              Сложные металлоконструкции
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+</div>
+<div class='successForm'>
+  <div class='successFormBlok'>
+		<svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg"  onClick="successFormClose();">
+			<path d="M11.113 8.99872L17.5567 2.56902C17.8389 2.2868 17.9974 1.90402 17.9974 1.5049C17.9974 1.10577 17.8389 0.722997 17.5567 0.440774C17.2745 0.158551 16.8918 0 16.4928 0C16.0937 0 15.711 0.158551 15.4288 0.440774L9 6.88546L2.57121 0.440774C2.28903 0.158551 1.90631 -2.9737e-09 1.50724 0C1.10817 2.9737e-09 0.725452 0.158551 0.443269 0.440774C0.161086 0.722997 0.00255743 1.10577 0.00255743 1.5049C0.00255743 1.90402 0.161086 2.2868 0.443269 2.56902L6.88704 8.99872L0.443269 15.4284C0.302812 15.5678 0.191329 15.7335 0.115249 15.9162C0.0391699 16.0988 0 16.2947 0 16.4925C0 16.6904 0.0391699 16.8863 0.115249 17.0689C0.191329 17.2516 0.302812 17.4173 0.443269 17.5567C0.582579 17.6971 0.74832 17.8086 0.930933 17.8847C1.11355 17.9608 1.30941 18 1.50724 18C1.70507 18 1.90094 17.9608 2.08355 17.8847C2.26616 17.8086 2.4319 17.6971 2.57121 17.5567L9 11.112L15.4288 17.5567C15.5681 17.6971 15.7338 17.8086 15.9165 17.8847C16.0991 17.9608 16.2949 18 16.4928 18C16.6906 18 16.8865 17.9608 17.0691 17.8847C17.2517 17.8086 17.4174 17.6971 17.5567 17.5567C17.6972 17.4173 17.8087 17.2516 17.8848 17.0689C17.9608 16.8863 18 16.6904 18 16.4925C18 16.2947 17.9608 16.0988 17.8848 15.9162C17.8087 15.7335 17.6972 15.5678 17.5567 15.4284L11.113 8.99872Z" fill="black"/>
+		</svg>
+		<p>
+	    Спасибо!<br><br>Ваша заявка принята,<br>в скором времени мы с Вами свяжемся!
+		</p>
+  </div>
+</div>  
+  <script src="js/main.min.js"></script>
+</body>
+</html>

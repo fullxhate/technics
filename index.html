@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Technics</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.min.css">
+</head>
+<body >
+
+<div class="wrapper">
+
+
+  <header class="header">
+    <div class="container">
+      <div class="header__top">
+        <div class="header__logo">
+          <a href="index.html" class="header__logo-link">
+            <img src="images/logo.png" alt="">
+          </a>
+          <div class="header__burger" id="hamburger" onclick="this.classList.toggle('open'), toggleMenuClass();">
+            <svg width="100" height="100" viewBox="0 0 100 100">
+              <path class="line line1" d="M 20,29.000046 H 80.000231 C 80.000231,29.000046 94.498839,28.817352 94.532987,66.711331 94.543142,77.980673 90.966081,81.670246 85.259173,81.668997 79.552261,81.667751 75.000211,74.999942 75.000211,74.999942 L 25.000021,25.000058" />
+              <path class="line line2" d="M 20,50 H 80" />
+              <path class="line line3" d="M 20,70.999954 H 80.000231 C 80.000231,70.999954 94.498839,71.182648 94.532987,33.288669 94.543142,22.019327 90.966081,18.329754 85.259173,18.331003 79.552261,18.332249 75.000211,25.000058 75.000211,25.000058 L 25.000021,74.999942" />
+            </svg>
+          </div>
+        </div>
+        <div class="header__overlay"></div>
+        <div class="header__contacts">
+          <div class="header__phone">
+            <img src="images/icons/icon-phone.svg" alt="">
+            <a href="tel:+78126799293" class="header__phone-item">+7(812)679-92-93</a>
+          </div>
+          <div class="header__email-one">
+            <div class="header__email-one__text">Аренда -</div>
+            <img src="images/icons/icon-email.svg" alt="">
+            <a href="mailto:arenda-stispunt@yandex.ru" class="header__email-one__item">arenda-stispunt@yandex.ru</a>
+          </div>
+          <div class="header__email-two">
+            <div class="header__email-two__text">СМР,шпунт -</div>
+            <img src="images/icons/icon-email.svg" alt="">
+            <a href="mailto:info@stispunt.ru" class="header__email-two__item">info@stispunt.ru</a>
+          </div>
+
+        </div>
+
+      </div>
+      <div class="header__bottom">
+        <nav class="header__nav">
+          <ul class="header__menu">
+            <li class="header__menu-item">
+              <a href="index.html" class="header__menu-link">Главная</a>
+            </li>
+            <li class="header__menu-item">
+              <a href="about.html" class="header__menu-link">О нас</a>
+            </li>
+            <li class="header__menu-item header__menu-item--dropdown-one">
+              <a href="#" class="header__menu-link" id="services-link" onclick="toggleSubMenu()">Услуги</a>
+              <img src="images/icons/arrow-down.svg" alt="">
+              <ul class="header__submenu-one " >
+                <li class="header__submenu-list">
+                  <a class="header__submenu-link" href="#">Строительство гидротехнических сооружений</a></li>
+                <li class="header__submenu-list">
+                  <a href="#">Устройство шпунтового ограждения и расчет</a>
+                </li>
+                <li class="header__submenu-list">
+                  <a class="header__submenu-link" href="#">Раскрепление шпунтового ограждения</a></li>
+                <li class="header__submenu-list">
+                  <a class="header__submenu-link" href="#">Земляные работы</a></li>
+                <li class="header__submenu-list">
+                  <a class="header__submenu-link" href="#">Функции генерального подрядчика</a></li>
+              </ul>
+            </li>
+            <li class="header__menu-item header__menu-item--dropdown-two">
+
+              <a href="#" class="header__menu-link" onclick="toggleSubMenuTwo()">Оборудование</a>
+              <img src="images/icons/arrow-down.svg" alt="">
+              <ul class="header__submenu-two">
+                <li class="header__submenu-list">
+                  <a class="header__submenu-link" href="installations.html">Установки статического вдавливания</a>
+                </li>
+                <li class="header__submenu-list">
+                  <a class="header__submenu-link" href="vibration-loaders.html">Вибропогружатели</a>
+                </li>
+                <!--                    <li class="header__submenu-list">-->
+                <!--                      &lt;!&ndash;                    <a class="header__submenu-link" href="#">Оборудование 3</a>&ndash;&gt;-->
+                <!--                    </li>-->
+              </ul>
+            </li>
+            <li class="header__menu-item">
+              <a href="shpunt.html" class="header__menu-link">Шпунт Ларсена</a>
+            </li>
+            <li class="header__menu-item">
+              <a href="rent.html" class="header__menu-link">Аренда техники</a>
+            </li>
+            <li class="header__menu-item">
+              <a href="news.html" class="header__menu-link">Новости</a></li>
+            <li class="header__menu-item"><a href="contacts.html" class="header__menu-link">Контакты</a>
+            </li>
+            <li class="header__menu-item">
+              <a href="vacancy.html" class="header__menu-link">Вакансии</a>
+            </li>
+            <div class="header__contacts-mobile">
+              <div class="header__phone">
+                <img src="images/icons/icon-phone.svg" alt="">
+                <a href="tel:+78126799293" class="header__phone-item">+7(812)679-92-93</a>
+              </div>
+              <div class="header__email-one">
+                <div class="header__email-one__text">Аренда -</div>
+                <img src="images/icons/icon-email.svg" alt="">
+                <a href="mailto:arenda-stispunt@yandex.ru" class="header__email-one__item">arenda-stispunt@yandex.ru</a>
+              </div>
+              <div class="header__email-two">
+                <div class="header__email-two__text">СМР,шпунт -</div>
+                <img src="images/icons/icon-email.svg" alt="">
+                <a href="mailto:info@stispunt.ru" class="header__email-two__item">info@stispunt.ru</a>
+              </div>
+
+            </div>
+          </ul>
+        </nav>
+      </div>
+    </div>
+
+
+
+
+  </header>
+
+
+  <div class="main">
+    <section class="start">
+        <div class="start__slider">
+
+          <div class="start__slide start__slide--one">
+            <div class="container">
+              <h2 class="start__slide-title">
+                Строительная <br>
+                Техника
+              </h2>
+              <div class="start__slide-bottom">
+                <a class="start__slide-link" href="#" >
+                  Перейти
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="start__slide start__slide--two">
+            <div class="container">
+              <h2 class="start__slide-title">
+                Строительная <br>
+                Техника
+              </h2>
+              <div class="start__slide-bottom">
+                <a class="start__slide-link" href="#" >
+                  Перейти
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="start__slide start__slide--three">
+            <div class="container">
+              <h2 class="start__slide-title">
+                Строительная <br>
+                Техника
+              </h2>
+              <div class="start__slide-bottom">
+                <a class="start__slide-link" href="#" >
+                  Перейти
+                </a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+    </section>
+    <section class="services">
+      <div class="container">
+        <h2 class="title">
+          Наши услуги
+        </h2>
+        <p class="services__subtitle">
+          ООО "СтройТехИмпорт" свою строительную деятельность веде т с 2006 года и имеет многолетний успешный опыт по широкому спектру работ:
+        </p>
+        <div class="services__items">
+          <a class="services__item" href="#">
+            <img class="services__item-icon--one" src="images/bg-images/1.svg" alt="">
+            <img class="services__item-img" src="images/services/1.png" alt="service img" >
+            <h4 class="services__item-title">
+              Строительство <br> гидротехнических сооружений
+            </h4>
+          </a>
+          <a class="services__item" href="#">
+            <img class="services__item-icon--two" src="images/bg-images/2.svg" alt="">
+            <img class="services__item-img" src="images/services/2.png" alt="service img" >
+            <h4 class="services__item-title">
+              Устройство шпунтового <br>
+              ограждения и расчет
+            </h4>
+          </a>
+          <a class="services__item" href="#">
+            <img class="services__item-icon--three" src="images/bg-images/3.svg" alt="">
+            <img class="services__item-img" src="images/services/3.png" alt="service img" >
+            <h4 class="services__item-title">
+              Раскрепление <br> шпунтового ограждения
+            </h4>
+          </a>
+          <a class="services__item" href="#">
+            <img class="services__item-icon--four" src="images/bg-images/4.svg" alt="">
+            <img class="services__item-img" src="images/services/4.png" alt="service img" >
+            <h4 class="services__item-title">
+              Земляные работы
+            </h4>
+          </a>
+        </div>
+        <div class="services__items-slider">
+          <a class="services__item" href="#">
+            <img class="services__item-icon--one" src="images/bg-images/1.svg" alt="">
+            <img class="services__item-img" src="images/services/1.png" alt="service img" >
+            <h4 class="services__item-title">
+              Строительство <br> гидротехнических сооружений
+            </h4>
+          </a>
+          <a class="services__item" href="#">
+            <img class="services__item-icon--two" src="images/bg-images/2.svg" alt="">
+            <img class="services__item-img" src="images/services/2.png" alt="service img" >
+            <h4 class="services__item-title">
+              Устройство шпунтового <br>
+              ограждения и расчет
+            </h4>
+          </a>
+          <a class="services__item" href="#">
+            <img class="services__item-icon--three" src="images/bg-images/3.svg" alt="">
+            <img class="services__item-img" src="images/services/3.png" alt="service img" >
+            <h4 class="services__item-title">
+              Раскрепление <br> шпунтового ограждения
+            </h4>
+          </a>
+          <a class="services__item" href="#">
+            <img class="services__item-icon--four" src="images/bg-images/4.svg" alt="">
+            <img class="services__item-img" src="images/services/4.png" alt="service img" >
+            <h4 class="services__item-title">
+              Земляные работы
+            </h4>
+          </a>
+        </div>
+        <div class="services__info">
+          <img class="services__info-img" src="images/services/5.png" alt="services img" >
+          <img class="services__info-icon" src="images/bg-images/5.svg" alt="">
+          <div class="services__info-text">
+            <p class="services__info-text__about">Мы осуществляем строительство и строительные работы на территории Санкт-Петербурга, Ленинградской обл. и в других регионах России.</p>
+            <p class="services__info-text__about">«СтройТехИмпорт» выполняет качественно и оперативно заказы любой сложности и типа, применяя самые современные технологии и оборудование:</p>
+            <div class="services__info-inner">
+              <div class="services__info-list">
+                <img src="images/icons/done.svg" alt="">
+                <p class="services__info-list__text">
+                  Вибропогружатели высокой частоты;
+                </p>
+              </div>
+              <div class="services__info-list">
+                <img src="images/icons/done.svg" alt="">
+                <p class="services__info-list__text">
+                  Вибропогружатели нормальной частоты;
+                </p>
+              </div>
+              <div class="services__info-list">
+                <img src="images/icons/done.svg" alt="">
+                <p class="services__info-list__text">
+                  Безрезонансные вибропогружатели;
+                </p>
+              </div>
+              <div class="services__info-list">
+                <img src="images/icons/done.svg" alt="">
+                <p class="services__info-list__text">
+                  Установки статического вдавливания.
+
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="services__bottom">
+          <p class="services__bottom-text"><b>Мы работаем с любыми типами шпунта</b>  H-профиль, U-профиль, Z-профиль, трубный шпунт (сваи-оболочки) таких известных производителей, как Tyssenn Krupp, Arcelormittal, ЕВРАЗ Металл Инпром.</p>
+          <p class="services__bottom-text">
+            Наш персонал имеет высокую квалификацию, материалы всегда в наличии, а слаженность технологического процесса обусловлена четкой организацией схемы работ. Все это гарантирует высокий уровень качества, а также оперативность в выполнении поставленных клиентом задач.
+            ООО «СтройТехИмпорт» на выполнение всех перечисленных работ имеет необходимые лицензии и сертификаты.
+          </p>
+        </div>
+      </div>
+    </section>
+    <section class="technics">
+      <div class="container">
+        <h2 class="title">
+          Наше оборудование и техника для выполнения строительных работ
+        </h2>
+        <div class="technics__items">
+          <a class="technics__item" href="#" >
+            <img src="images/technics/1.png" alt="">
+            <h4 class="technics__item-title">
+              УСТАНОВКИ СТАТИЧЕСКОГО ВДАВЛИВАНИЯ
+            </h4>
+          </a>
+          <a class="technics__item" href="#" >
+            <img src="images/technics/2.png" alt="">
+            <h4 class="technics__item-title">
+              ВИБРОПОГРУЖАТЕЛИ
+            </h4>
+          </a>
+          <a class="technics__item" href="#" >
+            <img src="images/technics/3.png" alt="">
+            <h4 class="technics__item-title">
+              АРЕНДА СТРОИТЕЛЬНОЙ ТЕХНИКИ
+            </h4>
+          </a>
+        </div>
+        <div class="technics__items-slider">
+          <a class="technics__item" href="#" >
+            <img src="images/technics/1.png" alt="">
+            <h4 class="technics__item-title">
+              УСТАНОВКИ СТАТИЧЕСКОГО ВДАВЛИВАНИЯ
+            </h4>
+          </a>
+          <a class="technics__item" href="#" >
+            <img src="images/technics/2.png" alt="">
+            <h4 class="technics__item-title">
+              ВИБРОПОГРУЖАТЕЛИ
+            </h4>
+          </a>
+          <a class="technics__item" href="#" >
+            <img src="images/technics/3.png" alt="">
+            <h4 class="technics__item-title">
+              АРЕНДА СТРОИТЕЛЬНОЙ ТЕХНИКИ
+            </h4>
+          </a>
+        </div>
+      </div>
+    </section>
+    <section class="news">
+      <div class="container">
+
+          <h2 class="title">
+            Новости компании
+          </h2>
+
+
+        <div class="news__bg">
+          <img src="images/bg-images/8.svg" alt="">
+        </div>
+          <div class="news__items">
+            <div class="news__item">
+              <h4 class="news__item-title">
+                <a href="short-news.html"> Внимание! У нас изменились реквизиты</a>
+
+              </h4>
+              <p class="news__item-subtitle">
+                У нас изменились реквизиты:
+              </p>
+              <p class="news__item-date">
+                01.01.23
+              </p>
+              <div class="news__item-bottom">
+                <a class="news__item-link" href="short-news.html" >
+                  <p class="news__item-link__text">
+                    ЧИТАТЬ
+                  </p>
+                  <img src="images/icons/arrow-news.svg" alt="">
+                </a>
+              </div>
+            </div>
+            <div class="news__item">
+              <h4 class="news__item-title">
+                <a href="short-news.html">У нас открыта вакансия электромонтажник</a>
+
+              </h4>
+              <p class="news__item-subtitle">
+                Подробности в разделе "Вакансии"
+              </p>
+              <p class="news__item-date">
+                01.01.23
+              </p>
+              <div class="news__item-bottom">
+                <a class="news__item-link" href="short-news.html" >
+                  <p class="news__item-link__text">
+                    ЧИТАТЬ
+                  </p>
+                  <img src="images/icons/arrow-news.svg" alt="">
+                </a>
+              </div>
+            </div>
+            <div class="news__item">
+              <h4 class="news__item-title">
+                <a href="short-news.html">У нас открыта вакансия электромонтажник</a>
+
+              </h4>
+              <p class="news__item-subtitle">
+                Подробности в разделе "Вакансии"
+              </p>
+              <p class="news__item-date">
+                01.01.23
+              </p>
+              <div class="news__item-bottom">
+                <a class="news__item-link" href="short-news.html" >
+                  <p class="news__item-link__text">
+                    ЧИТАТЬ
+                  </p>
+                  <img src="images/icons/arrow-news.svg" alt="">
+                </a>
+              </div>
+            </div>
+            <div class="news__item">
+              <h4 class="news__item-title">
+                <a href="short-news.html"> Внимание! У нас изменились реквизиты</a>
+
+              </h4>
+              <p class="news__item-subtitle">
+                У нас изменились реквизиты:
+              </p>
+              <p class="news__item-date">
+                01.01.23
+              </p>
+              <div class="news__item-bottom">
+                <a class="news__item-link" href="short-news.html" >
+                  <p class="news__item-link__text">
+                    ЧИТАТЬ
+                  </p>
+                  <img src="images/icons/arrow-news.svg" alt="">
+                </a>
+              </div>
+            </div>
+            <div class="news__item">
+              <h4 class="news__item-title">
+                <a href="short-news.html">Внимание! У нас изменились реквизиты</a>
+
+              </h4>
+              <p class="news__item-subtitle">
+                У нас изменились реквизиты:
+              </p>
+              <p class="news__item-date">
+                01.01.23
+              </p>
+              <div class="news__item-bottom">
+                <a class="news__item-link" href="short-news.html" >
+                  <p class="news__item-link__text">
+                    ЧИТАТЬ
+                  </p>
+                  <img src="images/icons/arrow-news.svg" alt="">
+                </a>
+              </div>
+            </div>
+          </div>
+        <div class="news__buttons">
+          <button type="button" class="slick-prev custom-prev">
+            <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect width="40" height="40" fill="#D8D8D8"/>
+              <path d="M24.5112 30.9999C24.191 31.0007 23.8746 30.9466 23.5853 30.8414C23.296 30.7362 23.0411 30.5827 22.8394 30.3921L12.4876 20.5359C12.1723 20.2419 12 19.8732 12 19.4928C12 19.1123 12.1723 18.7436 12.4876 18.4496L23.2038 8.59343C23.5676 8.25796 24.0903 8.047 24.6571 8.00695C25.2238 7.9669 25.7881 8.10105 26.2257 8.37988C26.6634 8.65871 26.9387 9.05938 26.9909 9.49376C27.0432 9.92813 26.8682 10.3606 26.5044 10.6961L16.9241 19.501L26.1829 28.3059C26.445 28.547 26.6114 28.8406 26.6626 29.152C26.7138 29.4633 26.6475 29.7794 26.4717 30.0628C26.2958 30.3463 26.0177 30.5851 25.6703 30.7512C25.3228 30.9172 24.9206 31.0036 24.5112 30.9999Z" fill="black"/>
+            </svg>
+
+          </button>
+          <button type="button" class="slick-next custom-next">
+            <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect width="40" height="40" fill="#3492AC"/>
+              <path d="M16.4888 30.9999C16.809 31.0007 17.1254 30.9466 17.4147 30.8414C17.704 30.7362 17.9589 30.5827 18.1606 30.3921L28.5124 20.5359C28.8277 20.2419 29 19.8732 29 19.4928C29 19.1123 28.8277 18.7436 28.5124 18.4496L17.7962 8.59343C17.4324 8.25796 16.9097 8.047 16.3429 8.00695C15.7762 7.9669 15.2119 8.10105 14.7743 8.37988C14.3366 8.65871 14.0613 9.05938 14.0091 9.49376C13.9568 9.92813 14.1318 10.3606 14.4956 10.6961L24.0759 19.501L14.8171 28.3059C14.555 28.547 14.3886 28.8406 14.3374 29.152C14.2862 29.4633 14.3525 29.7794 14.5283 30.0628C14.7042 30.3463 14.9823 30.5851 15.3297 30.7512C15.6772 30.9172 16.0794 31.0036 16.4888 30.9999Z" fill="white"/>
+            </svg>
+
+
+          </button>
+        </div>
+
+
+
+
+      </div>
+    </section>
+  </div>
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__inner">
+        <div class="footer__about">
+          <img class="footer__logo" src="images/logo.png" alt="" >
+          <p class="footer__about-text">
+            Общество с ограниченной ответственностью «СтройТехИмпорт»
+          </p>
+          <div class="footer__about-links">
+            <a class="footer__about-link" href="#" >
+              <img src="images/icons/map.svg" alt="">
+              <p class="footer__about-link-text">
+                195027, г.Санкт-Петербург, Выборгское шоссе, д. 112.
+              </p>
+            </a>
+            <a class="footer__about-link" href="tel:78126799293" >
+              <img src="images/icons/icon-phone.svg" alt="">
+              <p class="footer__about-link-text">
+                +7 (812) 679-92-93
+              </p>
+            </a>
+            <a class="footer__about-link" href="mailto:info@stispunt.ru" >
+              <img src="images/icons/mail-2.png" alt="">
+              <p class="footer__about-link-text">
+                info@stispunt.ru
+              </p>
+            </a>
+
+          </div>
+        </div>
+        <div class="footer__links">
+          <div class="footer__links-item">
+            <a class="footer__link" href="#" >
+              Устройство шпунтового ограждения и расчет
+            </a>
+            <a class="footer__link" href="#" >
+              Строительство гидротехнических сооружений
+            </a>
+            <a class="footer__link" href="#" >
+              Раскрепление шпунтового ограждения
+            </a>
+            <a class="footer__link" href="#" >
+              Строительство эстакад, путепроводов и мостов
+            </a>
+          </div>
+          <div class="footer__links-item">
+            <a class="footer__link" href="#" >
+              Погружение и извлечение шпунта
+            </a>
+            <a class="footer__link" href="#" >
+              Защита строительных конструкций
+            </a>
+            <a class="footer__link" href="#" >
+              Свайные работы
+            </a>
+            <a class="footer__link" href="#" >
+              Земляные работы
+            </a>
+            <a class="footer__link" href="#" >
+              Сложные металлоконструкции
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+</div>
+
+  <script src="js/main.min.js"></script>
+</body>
+</html>

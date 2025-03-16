@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Technics</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.min.css">
+</head>
+<body>
+<div class="wrapper">
+    <header class="header">
+        <div class="container">
+            <div class="header__top">
+                <div class="header__logo">
+                    <a href="index.html" class="header__logo-link">
+                        <img src="images/logo.png" alt="">
+                    </a>
+                    <div class="header__burger" id="hamburger" onclick="this.classList.toggle('open'), toggleMenuClass();">
+                        <svg width="100" height="100" viewBox="0 0 100 100">
+                            <path class="line line1" d="M 20,29.000046 H 80.000231 C 80.000231,29.000046 94.498839,28.817352 94.532987,66.711331 94.543142,77.980673 90.966081,81.670246 85.259173,81.668997 79.552261,81.667751 75.000211,74.999942 75.000211,74.999942 L 25.000021,25.000058" />
+                            <path class="line line2" d="M 20,50 H 80" />
+                            <path class="line line3" d="M 20,70.999954 H 80.000231 C 80.000231,70.999954 94.498839,71.182648 94.532987,33.288669 94.543142,22.019327 90.966081,18.329754 85.259173,18.331003 79.552261,18.332249 75.000211,25.000058 75.000211,25.000058 L 25.000021,74.999942" />
+                        </svg>
+                    </div>
+                </div>
+                <div class="header__overlay"></div>
+                <div class="header__contacts">
+                    <div class="header__phone">
+                        <img src="images/icons/icon-phone.svg" alt="">
+                        <a href="tel:+78126799293" class="header__phone-item">+7(812)679-92-93</a>
+                    </div>
+                    <div class="header__email-one">
+                        <div class="header__email-one__text">Аренда -</div>
+                        <img src="images/icons/icon-email.svg" alt="">
+                        <a href="mailto:arenda-stispunt@yandex.ru" class="header__email-one__item">arenda-stispunt@yandex.ru</a>
+                    </div>
+                    <div class="header__email-two">
+                        <div class="header__email-two__text">СМР,шпунт -</div>
+                        <img src="images/icons/icon-email.svg" alt="">
+                        <a href="mailto:info@stispunt.ru" class="header__email-two__item">info@stispunt.ru</a>
+                    </div>
+
+                </div>
+
+            </div>
+            <div class="header__bottom">
+                <nav class="header__nav">
+                    <ul class="header__menu">
+                        <li class="header__menu-item">
+                            <a href="index.html" class="header__menu-link">Главная</a>
+                        </li>
+                        <li class="header__menu-item">
+                            <a href="about.html" class="header__menu-link">О нас</a>
+                        </li>
+                        <li class="header__menu-item header__menu-item--dropdown-one">
+                            <a href="#" class="header__menu-link" id="services-link" onclick="toggleSubMenu()">Услуги</a>
+                            <img src="images/icons/arrow-down.svg" alt="">
+                            <ul class="header__submenu-one " >
+                                <li class="header__submenu-list">
+                                    <a class="header__submenu-link" href="#">Строительство гидротехнических сооружений</a></li>
+                                <li class="header__submenu-list">
+                                    <a href="#">Устройство шпунтового ограждения и расчет</a>
+                                </li>
+                                <li class="header__submenu-list">
+                                    <a class="header__submenu-link" href="#">Раскрепление шпунтового ограждения</a></li>
+                                <li class="header__submenu-list">
+                                    <a class="header__submenu-link" href="#">Земляные работы</a></li>
+                                <li class="header__submenu-list">
+                                    <a class="header__submenu-link" href="#">Функции генерального подрядчика</a></li>
+                            </ul>
+                        </li>
+                        <li class="header__menu-item header__menu-item--dropdown-two">
+
+                            <a href="#" class="header__menu-link" onclick="toggleSubMenuTwo()">Оборудование</a>
+                            <img src="images/icons/arrow-down.svg" alt="">
+                            <ul class="header__submenu-two">
+                                <li class="header__submenu-list">
+                                    <a class="header__submenu-link" href="installations.html">Установки статического вдавливания</a>
+                                </li>
+                                <li class="header__submenu-list">
+                                    <a class="header__submenu-link" href="vibration-loaders.html">Вибропогружатели</a>
+                                </li>
+                                <!--                    <li class="header__submenu-list">-->
+                                <!--                      &lt;!&ndash;                    <a class="header__submenu-link" href="#">Оборудование 3</a>&ndash;&gt;-->
+                                <!--                    </li>-->
+                            </ul>
+                        </li>
+                        <li class="header__menu-item">
+                            <a href="shpunt.html" class="header__menu-link">Шпунт Ларсена</a>
+                        </li>
+                        <li class="header__menu-item">
+                            <a href="rent.html" class="header__menu-link">Аренда техники</a>
+                        </li>
+                        <li class="header__menu-item">
+                            <a href="news.html" class="header__menu-link">Новости</a></li>
+                        <li class="header__menu-item"><a href="contacts.html" class="header__menu-link">Контакты</a>
+                        </li>
+                        <li class="header__menu-item">
+                            <a href="vacancy.html" class="header__menu-link">Вакансии</a>
+                        </li>
+                        <div class="header__contacts-mobile">
+                            <div class="header__phone">
+                                <img src="images/icons/icon-phone.svg" alt="">
+                                <a href="tel:+78126799293" class="header__phone-item">+7(812)679-92-93</a>
+                            </div>
+                            <div class="header__email-one">
+                                <div class="header__email-one__text">Аренда -</div>
+                                <img src="images/icons/icon-email.svg" alt="">
+                                <a href="mailto:arenda-stispunt@yandex.ru" class="header__email-one__item">arenda-stispunt@yandex.ru</a>
+                            </div>
+                            <div class="header__email-two">
+                                <div class="header__email-two__text">СМР,шпунт -</div>
+                                <img src="images/icons/icon-email.svg" alt="">
+                                <a href="mailto:info@stispunt.ru" class="header__email-two__item">info@stispunt.ru</a>
+                            </div>
+
+                        </div>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+
+
+
+
+    </header>
+
+    <div class="main">
+<section class="vacancy-page">
+    <div class="container">
+        <h2 class="vacancy-page__title">
+            Прораб
+        </h2>
+        <div class="vacancy-page__inner">
+            <div class="vacancy-page__left">
+                <img class="vacancy-page__img" src="images/news/1.png" alt="">
+                <div class="vacancy-page__contacts">
+                    <div class="vacancy-page__contacts-item">
+                        <p class="vacancy-page__contacts-item__text">
+                            Отправить резюме можно на почту
+                        </p>
+                        <a href="mailto:info@stispunt.ru" class="vacancy-page__contacts-item__link">
+                            info@stispunt.ru
+                        </a>
+                    </div>
+                    <div class="vacancy-page__contacts-item">
+                        <p class="vacancy-page__contacts-item__text">
+                            или свяжитесь с нами по телефону
+                        </p>
+                        <a href="tel:78126799293" class="vacancy-page__contacts-item__link">
+                            +7 (812) 679-92-93
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="vacancy-page__right">
+                <h3 class="vacancy-page__right-title">
+                    Обязанности:
+                </h3>
+                <ul class="vacancy-page__right-inner">
+                    <li class="vacancy-page__right-list">
+                        организация и контроль выполнения работ
+                    </li>
+                    <li class="vacancy-page__right-list">
+                        планирование работы на возглавляемом участке
+                    </li>
+                    <li class="vacancy-page__right-list">
+                        ведение учета выполненных работ
+                    </li>
+                    <li class="vacancy-page__right-list">
+                        оформление технической документации
+                    </li>
+                    <li class="vacancy-page__right-list">
+                        контроль состояния техники безопасности
+                    </li>
+                </ul>
+                <h3 class="vacancy-page__right-title">
+                    Требования:
+                </h3>
+                <ul class="vacancy-page__right-inner vacancy-page__right-inner--another">
+                    <li class="vacancy-page__right-list">
+                        Высшее профильное образование (бакалавриат), либо высшее образование (непрофильное) – бакалавриат и дополнительное профессиональное образование.
+
+                    </li>
+                    <li class="vacancy-page__right-list">
+                        НАКС II уровень, ВИК.
+                    </li>
+                    <li class="vacancy-page__right-list">
+                        Знание: программное обеспечение MS-Office (Word, Excel), ресурсы Internet, AutoCAD, справочные системы и специализированные базы данных, порядок работы в системах электронного документооборота (СЭД), технологии производства строительных и монтажных работ технологического трубопровода, принципы планирования работы на возглавляемом участке, требования нормативных технических документов к производству строительно-монтажных работ.
+                    </li>
+                    <li class="vacancy-page__right-list">
+                        Опыт работы не менее 3 лет по профессии на технологическом трубопроводе, обвязке технологического оборудования.
+                    </li>
+                    <li class="vacancy-page__right-list">
+                        Сертификат на Ковид не позднее 1 года
+                    </li>
+                </ul>
+                <h3 class="vacancy-page__right-title">
+                    Условия:
+                </h3>
+                <ul class="vacancy-page__right-inner">
+                    <li class="vacancy-page__right-list">
+                        Полная занятость, полный день
+                    </li>
+                    <li class="vacancy-page__right-list">
+                        Оформление по ТК;
+                    </li>
+                    <li class="vacancy-page__right-list">
+                        Требуемый опыт работы: 3–6 лет
+                    </li>
+                    <li class="vacancy-page__right-list">
+                        График 5/2 с 08:00 до 17:00
+                    </li>
+                    <li class="vacancy-page__right-list">
+                        Оклад от 47 000 рублей
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+    </div>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__inner">
+                <div class="footer__about">
+                    <img class="footer__logo" src="images/logo.png" alt="">
+                    <p class="footer__about-text">
+                        Общество с ограниченной ответственностью «СтройТехИмпорт»
+                    </p>
+                    <div class="footer__about-links">
+                        <a class="footer__about-link" href="#">
+                            <img src="images/icons/map.svg" alt="">
+                            <p class="footer__about-link-text">
+                                195027, г.Санкт-Петербург, Выборгское шоссе, д. 112.
+                            </p>
+                        </a>
+                        <a class="footer__about-link" href="tel:78126799293">
+                            <img src="images/icons/icon-phone.svg" alt="">
+                            <p class="footer__about-link-text">
+                                +7 (812) 679-92-93
+                            </p>
+                        </a>
+                        <a class="footer__about-link" href="mailto:info@stispunt.ru">
+                            <img src="images/icons/mail-2.png" alt="">
+                            <p class="footer__about-link-text">
+                                info@stispunt.ru
+                            </p>
+                        </a>
+
+                    </div>
+                </div>
+                <div class="footer__links">
+                    <div class="footer__links-item">
+                        <a class="footer__link" href="#">
+                            Устройство шпунтового ограждения и расчет
+                        </a>
+                        <a class="footer__link" href="#">
+                            Строительство гидротехнических сооружений
+                        </a>
+                        <a class="footer__link" href="#">
+                            Раскрепление шпунтового ограждения
+                        </a>
+                        <a class="footer__link" href="#">
+                            Строительство эстакад, путепроводов и мостов
+                        </a>
+                    </div>
+                    <div class="footer__links-item">
+                        <a class="footer__link" href="#">
+                            Погружение и извлечение шпунта
+                        </a>
+                        <a class="footer__link" href="#">
+                            Защита строительных конструкций
+                        </a>
+                        <a class="footer__link" href="#">
+                            Свайные работы
+                        </a>
+                        <a class="footer__link" href="#">
+                            Земляные работы
+                        </a>
+                        <a class="footer__link" href="#">
+                            Сложные металлоконструкции
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</div>
+
+<script src="js/main.min.js"></script>
+</body>
+</html>
